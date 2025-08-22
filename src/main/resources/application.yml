@@ -36,7 +36,7 @@ spring:
         base-url: https://generativelanguage.googleapis.com
         completions-path: /v1beta/openai/chat/completions
         options:
-          model: gemini-2.5-flash
+          model: gemini-2.5-flash-lite
       api-key: ${GEMINI_API_KEY}
       embedding:
         base-url: https://generativelanguage.googleapis.com
@@ -55,3 +55,8 @@ springdoc:
     path: /docs
     operationsSorter: method
     display-request-duration: true
+
+
+logging:
+  level:
+    org.springframework.ai.chat.client.advisor.SimpleLoggerAdvisor: DEBUG
